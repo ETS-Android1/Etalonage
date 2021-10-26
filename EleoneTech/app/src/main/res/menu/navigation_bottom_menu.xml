@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_navigation_botom"
+        android:icon="@drawable/home"
+        android:title="Accueil"
+        app:cnb_iconColor="@color/bleu_ciel"/>
+
+    <item
+        android:id="@+id/profil_navigation_botom"
+        android:icon="@drawable/profil"
+        android:title="Profil"
+        app:cnb_iconColor="@color/orange"/>
+
+    <item
+        android:id="@+id/deconnexion_navigation_botom"
+        android:icon="@drawable/deconnexion"
+        android:title="Déconnexion"
+        app:cnb_iconColor="@color/bleu"/>
+
+    <item
+        android:id="@+id/aide_navigation_botom"
+        android:icon="@drawable/aide"
+        android:title="Aide"
+        app:cnb_iconColor="@color/purple_200"/>
+
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".NombreLimiteDepasserActivity">
+
+    <ImageView
+        android:id="@+id/icon_nombre_essaie"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/nbr_saisie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/titre_nombre_essaie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/nombre_essaye"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_nombre_essaie">
+    </TextView>
+
+    <TextView
+        android:id="@+id/texte_nombre_essaie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/info_nombre_essaie"
+        android:textColor="@color/gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titre_nombre_essaie">
+    </TextView>
+
+    <TextView
+        android:id="@+id/ressayer_ici_nombre_essaie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/ressayer"
+        android:textColor="@color/gray"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/reload"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/texte_nombre_essaie">
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context=".FicheVisiteActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_fiche_visites"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:logo="@drawable/logo_societe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll_view_fiche_visites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_fiche_visites"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:id="@+id/wallpaper_fiche_visites"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/fiche_visite"
+                android:backgroundTint="@color/transparent"
+                android:backgroundTintMode="src_over"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tittre_fiche_visites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.06"
+                android:text="@string/titre_fiche_visite"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wallpaper_fiche_visites">
+            </TextView>
+
+            <TextView
+                android:id="@+id/mini_tittre_fiche_visites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:textStyle="normal"
+                android:text=""
+                android:textColor="@color/black"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tittre_fiche_visites"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_informations_fiche_visites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/wallpaper_white"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/mini_tittre_fiche_visites"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/code_equipement">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_code_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/code_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/code_equipement_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/code_equipement"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/description_equipement">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_description_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/description_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/description_equipement_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/description_equipement"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/emplacement_equipement">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_emplacement_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/emplacement_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/emplacement_equipement_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/emplacement_equipement"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/num_serie_equipement">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_num_serie_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numero_serie_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/numero_serie_equipement_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numero_serie_equipement"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/date_fin_equipement">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_date_fin_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_fin_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/date_fin_validite_equipement_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_fin_equipement"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_groupe_societe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/societe">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_societe_etalonage_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/societe_etalonage_equipement"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/societe_eleonetage_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/societe_etalonage_equipement"
+                            android:textColorHint="@color/bleu"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:background="@null"
+                            android:textColor="@color/orange">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/erreur_societe_eleonetage_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/rouge"
+                            android:textSize="10dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_groupe_technicien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/technicien">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_technicien_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/technicien_hint"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/technicien_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/technicien_hint"
+                            android:textColorHint="@color/bleu"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:background="@null"
+                            android:textColor="@color/orange">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/erreur_technicien_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/rouge"
+                            android:textSize="10dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_groupe_remarques"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/remarque">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_remarque_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/remarques_hint"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/remarque_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/remarques_hint"
+                            android:textColorHint="@color/bleu"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:background="@null"
+                            android:textColor="@color/orange">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/erreur_remarque_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/rouge"
+                            android:textSize="10dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_groupe_categorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/categorie">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_category_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category_hint"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/category_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@null">
+                        </androidx.appcompat.widget.AppCompatSpinner>
+
+                        <TextView
+                            android:id="@+id/erreur_category_fiche_visite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/rouge"
+                            android:textSize="10dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/exigence">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_exigence_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/exigence_hint"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/exigence_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@null">
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    android:padding="15sp"
+                    android:background="@color/gray_light">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/lieu">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/groupe_lieu_etalonage_equipement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lieu_etalonage"
+                            android:textSize="15sp"
+                            android:textColor="@color/bleu">
+                        </TextView>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/lieu_etalonage_fiche_visite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@null"
+                            android:textColor="@color/orange">
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/valider_qr_code_fiche_visite"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/button_bleu"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textAllCaps="true"
+                    android:text="@string/valider_code_qr"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                </androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

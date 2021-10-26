@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_margin="20dp"
+    tools:context=".AideFragement">
+
+    <TextView
+        android:id="@+id/titre_aide_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/bleu"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.07"
+        android:textAllCaps="true"
+        android:text="@string/besion_aide"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/description_aide_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.07"
+        android:textAllCaps="true"
+        android:text="@string/reponses"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="@id/titre_aide_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/_view_pager_aide_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_indicateurs_aide_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_aide_home">
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_indicateurs_aide_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

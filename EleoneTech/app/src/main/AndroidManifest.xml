@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eleonetech" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_application"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security"
+        android:roundIcon="@mipmap/logo_application"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EleoneTech"
+        android:usesCleartextTraffic="true" >
+        <activity android:name=".AfficherCertifActivity" >
+        </activity>
+        <activity
+            android:name=".CertificatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InformationsRapportsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChercherRapportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModifierInformationsProfilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QrCodeIncorrecteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResultatQrCodeScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QrScannerCodeEquipementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FicheVisiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VisitesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InformationsEquipementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListeEquipementsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModifierPasswordProfilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NombreLimiteDepasserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasswordOublie3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasswordOublie2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasswordOublie1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreerCompte4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreerCompte3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConnexionServeurDesactiverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConnexionDesactiverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreerCompte2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreerCompte1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

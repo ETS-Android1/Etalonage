@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/wallpaper_profil"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/wallpaper_profil"
+            android:backgroundTint="@color/transparent"
+            android:backgroundTintMode="src_over"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/space_profil"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="62dp"
+            app:layout_constraintBottom_toBottomOf="@id/wallpaper_profil"
+            app:layout_constraintStart_toStartOf="@id/wallpaper_profil"
+            app:layout_constraintEnd_toEndOf="@id/wallpaper_profil">
+        </Space>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photo_profil"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:civ_border_width="8dp"
+            app:civ_border_color="@color/white"
+            android:src="@drawable/profil_aide"
+            app:layout_constraintTop_toBottomOf="@id/space_profil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <Space
+            android:id="@+id/space_photo_profil"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="62dp"
+            app:layout_constraintBottom_toBottomOf="@id/photo_profil"
+            app:layout_constraintStart_toStartOf="@id/photo_profil"
+            app:layout_constraintEnd_toEndOf="@id/photo_profil">
+        </Space>
+
+        <RelativeLayout
+            android:id="@+id/linear_layout_capture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/arrier_plan_circle_gray"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/space_photo_profil"
+            app:layout_constraintEnd_toEndOf="@id/photo_profil"
+            app:layout_constraintStart_toStartOf="@id/photo_profil">
+
+            <ImageView
+                android:id="@+id/capture_icon_profil"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/camera"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+            </ImageView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nom_prenom_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:letterSpacing="0.06"
+            android:text="@string/titre_profil_hint"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo_profil">
+        </TextView>
+
+        <TextView
+            android:id="@+id/poste_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:textStyle="normal"
+            android:text="@string/poste_profil_home"
+            android:textColor="@color/black"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/nom_prenom_profil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/wallpaper_white"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/poste_profil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_informations_profil"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/button_bleu"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAllCaps="true"
+                android:text="@string/tittre_button_profil"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/modifier">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_password_profil"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAllCaps="true"
+                android:text="@string/modifier_password"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/modifier">
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ligne_separation_informations_profil"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:backgroundTint="@color/gray"
+            android:layout_margin="25dp"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_informations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="25dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/ligne_separation_informations_profil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/titre_profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.06"
+                android:text="@string/titre_information_profil"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_purple_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/user">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_prenom_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prenom_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/prenom_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prenom_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_orange_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/user">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_nom_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nom_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/nom_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nom_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_purple_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/email">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_email_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/email_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_orange_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/poste">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_poste_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/poste_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/poste_info_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/poste_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_purple_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/smartphone">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_mobile_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/numero_profil_hint"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mobile_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/numero_profil_hint"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_orange_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/home">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_adresse_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adresse_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/adresse_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adresse_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/linear_layout_purple_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/naissance">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/groupe_naissance_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/naissance_profil"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/naissance_profil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/naissance_profil"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bleu">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deconnexion_profil"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/button_bleu"
+            android:clickable="true"
+            android:focusable="true"
+            android:textAllCaps="true"
+            android:text="@string/tittre_button_profil2"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_informations">
+        </androidx.appcompat.widget.AppCompatButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

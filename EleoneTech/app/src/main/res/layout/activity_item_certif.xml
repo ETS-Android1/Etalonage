@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/informations_chercher_rapport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:background="@color/purple_light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/certificat">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/code_equipement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/code_equipement"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bleu">
+            </TextView>
+
+            <TextView
+                android:id="@+id/date_certif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_certificat_hint"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bleu">
+            </TextView>
+
+            <TextView
+                android:id="@+id/certificat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/certificat_hint"
+                android:textSize="13sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bleu">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
